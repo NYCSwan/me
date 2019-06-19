@@ -1,0 +1,14 @@
+.App-header {
+  position: fixed;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-size: calc(10px + 2vmin);
+  &.close {
+    // width: 0;
+  }
+  &.open {
+  }
+}
