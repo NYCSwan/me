@@ -1,37 +1,65 @@
 @import './utils/_mixins';
+@import './utils/_theme';
 
-  .Header-list {
-    background-color: transparent;
-    min-height: 100vh;
-    z-index: 99;
-    &.open {
-      border-top: 100px solid #69af33;
-      border-bottom: 40px solid #69af33;
-      border-left: 40px solid #69af33;
-      border-right: 40px solid #69af33;
-    }
-    &.close {
-      border: none;
-      display: none;
-    }
+.m-menu {
+  width: inherit;
+  height: 0;
+  background-color: transparent;
+  &.open {
+    height: 100vh;
+  }
+  .inner {
+    width: inherit;
+    height: 100vh;
+    left: 50px;
+    top: 0;
 
-    .Header-link {
-      color: black;
+    .Header-list {
+      background-color: transparent;
+      height: 0;
+      top: 90px;
+      z-index: 99;
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
       list-style: none;
       list-style-type: none;
       text-decoration: none;
+      left: 8%;
+      opacity: 0;
+      width: 65%;
+      &.open {
+        opacity: 1;
+        height: 70px;
+        margin-bottom: 0;
+        .Header-link {
+          height: auto;
+
+          &.slide-up {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-family: $header;
+            animation: slide-up 1s ease-in;
+              .text {
+                color: $white;
+                font-weight: bold;
+                letter-spacing: .1rem;
+                &:focus {
+                  color: $purple;
+                  font-weight: bold;
+                  text-decoration: underline;
+                }
+              }
+            @include slide-up;
+          }
+        }
+      }
       &.close {
         display: none;
       }
-    .slide-up {
-      display: block;
-      animation: slide-up 1s ease;
-      &:focus {
-        color: rgba(85, 26, 139, 0.5);
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-    @include slide-up;
     }
   }
+}
