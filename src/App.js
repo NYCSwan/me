@@ -11,10 +11,11 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/portfolio" component={Portfolio} />
+        <React.StrictMode>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/portfolio" component={Portfolio} />
+        </React.StrictMode>
       </div>
     </Router>
   );
