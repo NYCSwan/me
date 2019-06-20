@@ -1,14 +1,69 @@
+@import "./utils/_mixins";
+
 .App-header {
   position: fixed;
-  z-index: 1;
-  min-height: 100vh;
+  display: block;
+  z-index: 99;
+  height: 0;
   width: 100%;
   top: 0;
   left: 0;
-  font-size: calc(10px + 2vmin);
-  &.close {
-    // width: 0;
-  }
   &.open {
+    animation: slide-down 2s ease-in;
+    border-top: 80px solid #69af33;
+    border-bottom: 30px solid #69af33;
+    border-left: 30px solid #69af33;
+    border-right: 30px solid #69af33;
+    height: 100%;
+  }
+  .logo {
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+    position: fixed;
+    top: 20px;
+    left: 1%;
+  }
+
+  .menu {
+    position: fixed;
+    display: block;
+    z-index:99;
+    width: 60px;
+    height:60px;
+    top: 15px;
+    left: 48%;
+    text-decoration: none;
+  }
+
+  .communication-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    right: 80px;
+    top: 25px;
+    width: 70px;
+  }
+
+}
+@keyframes slide-down {
+  0% {
+    height: 0;
+    border: 0;
+  }
+  50% {
+    height: 60%;
+    border-top: 80px solid #69af33;
+    border-left: 10px solid #69af33;
+    border-right: 10px  solid #69af33;
+  }
+  100% {
+    border-top: 80px solid #69af33;
+    border-bottom: 30px solid #69af33;
+    border-left: 30px solid #69af33;
+    border-right: 30px solid #69af33;
+    height: 100%;
+    // transition: border-left border-right border-bottom 1s ease;
   }
 }

@@ -1,32 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpandedHeader from "./ExpandedHeader";
-import MenuHeader from "./MenuHeader";
+// import MenuHeader from "./MenuHeader";
+import MaterialIcon from "material-icons-react";
+import "./MenuHeader.scss";
+import logo from "./swan_logo_white.png";
 import "./Header.scss";
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false
-    };
-    this.mouseOver = this.mouseOver.bind(this);
-  }
+function Header() {
+  const [hover, mouseOver] = useState(false);
 
-  mouseOver = () => {
-    console.log("mouse over");
-    const { hover } = this.state;
-    this.setState({ hover: !hover });
-  };
-
-  render() {
-    const { hover } = this.state;
-
-    return (
-      <div className={hover === true ? "App-header close" : "App-header open"}>
-        <MenuHeader onMouseOver={this.mouseOver} />
-        <ExpandedHeader hover={hover} />
+  // <MenuHeader onMouseOver={() => mouseOver(!hover)} />
+  return (
+    <nav className={hover === true ? "App-header open" : "App-header close"}>
+      <img
+        className="logo"
+        src={logo}
+        alt="Megan Swanby- Kickass problem solver, kind soul, tenacious programmer"
+      />
+      <a
+        className={"menu"}
+        href="/home"
+        onMouseOver={() => mouseOver(!hover)}
+        onClick={() => mouseOver(!hover)}
+      >
+        <MaterialIcon
+          icon="format_align_justify"
+          size="large"
+          color={"#ffffff"}
+        />
+      </a>
+      <ExpandedHeader hover={hover} />
+      <div className="communication-container">
+        <MaterialIcon icon="link" size="small" color={"#ffffff"} />
+        <MaterialIcon icon="face" size="small" color={"#ffffff"} />
       </div>
-    );
-  }
+    </nav>
+  );
 }
 export default Header;
