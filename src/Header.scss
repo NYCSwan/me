@@ -51,8 +51,10 @@
   0% {
     height: 0;
     border: 0;
+    opacity: 0;
   }
   50% {
+    opacity: 1;
     height: 60%;
     border-top: 80px solid #69af33;
     border-left: 10px solid #69af33;
