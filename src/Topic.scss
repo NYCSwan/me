@@ -1,0 +1,44 @@
+@import "./utils/_theme";
+
+.Topic {
+  // height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2%;
+  .topics {
+    display: flex;
+    flex-grow: 1;
+    // background-color: $white;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    height: 100%;
+    padding-top: 2%;
+    .body {
+      background-color: $white;
+      border-radius: 20px;
+      box-shadow: 4px 4px 1px 0 $lightBlue;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-content: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      height: auto;
+      .title {
+        text-align: center;
+        font-size: 1rem;
+      }
+      .text {
+        color: $text;
+        font-family: $text;
+      }
+    }
+  }
+}

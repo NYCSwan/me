@@ -1,0 +1,17 @@
+@import "./utils/_theme";
+.tags {
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  .tag {
+    font-size: .6rem;
+    font-family: $text;
+    color: $purple;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: $lightGrey;
+  }
+}

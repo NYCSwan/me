@@ -1,16 +1,37 @@
-@import "./utils/theme";
+@import "./utils/_theme";
 
 .Portfolio-container {
-  z-index: 10;
+  z-index: 90;
+  position: fixed;
+  left: 0;
+  top: 70px;
   padding-left: 5%;
   padding-right: 5%;
-  background-color: $black;
-  padding-top: 10%;
+  background-color: $lightGrey;
+  width: inherit;
   height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3%;
+  .header {
+    color: $white;
+    font-family: $header;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
   .cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
+    .link {
+      align-self: center;
+      text-align: center;
+      color: $text !important;
+      font-family: $text;
+    }
   }
 }
