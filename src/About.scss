@@ -6,13 +6,26 @@
   left: 0;
   display: flex;
   flex-flow: column nowrap;
-  // height: 100%;
+  justify-content: flex-start;
+  width: inherit;
+  height: 100%;
+  background-color: $lightGrey;
   .header {
+    padding-bottom: 2%;
     font-family: $header;
-    color: $text;
+    color: $white;
     font-size: 1rem;
+    margin-top: 2%;
   }
-  .img {
-    height: 50px;
+  .MuiGridListTile-tile {
+    img {
+      filter: grayscale(0);
+      &:hover {
+        filter : grayscale(100%);
+      }
+    }
+    &:hover {
+      transition: filter .5s ease-in-out;
+    }
   }
 }
