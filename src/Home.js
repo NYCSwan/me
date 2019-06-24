@@ -34,6 +34,10 @@ const quotes = [
     author: "― Why The Lucky Stiff"
   },
   {
+    text: "Megan quote about me",
+    author: "― Why The Lucky Stiff"
+  },
+  {
     text:
       "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
     author: "― Martin Fowler"
