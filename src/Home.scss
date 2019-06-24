@@ -2,6 +2,18 @@
   z-index: 1;
   padding-left: '5%';
   padding-right: '5%';
-  margin-top: 100px;
-
+  height: inherit;
+  position: fixed;
+  top: 70px;
+  left:0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  #background-video {
+    position: fixed;
+    top: 70px;
+    left: 0;
+  }
 }

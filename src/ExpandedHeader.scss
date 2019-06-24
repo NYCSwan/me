@@ -2,14 +2,14 @@
 @import './utils/_theme';
 
 .m-menu {
-  width: inherit;
+  width: 0;
   height: 0;
   background-color: transparent;
   &.open {
     height: 100vh;
   }
   .inner {
-    width: inherit;
+    width: 0;
     height: 100vh;
     left: 50px;
     top: 0;

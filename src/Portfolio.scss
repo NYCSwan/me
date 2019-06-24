@@ -1,5 +1,16 @@
+@import "./utils/theme";
+
 .Portfolio-container {
   z-index: 10;
   padding-left: 5%;
-  padding-right: '5%';
+  padding-right: 5%;
+  background-color: $black;
+  padding-top: 10%;
+  height: inherit;
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }

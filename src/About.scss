@@ -1,0 +1,18 @@
+@import "./utils/_theme";
+
+.About-container {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  // height: 100%;
+  .header {
+    font-family: $header;
+    color: $text;
+    font-size: 1rem;
+  }
+  .img {
+    height: 50px;
+  }
+}

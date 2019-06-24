@@ -5,19 +5,7 @@
   z-index: 1;
   height: 100vh;
   width: 100%;
-}
-
-.Quote {
-  font-family: 'Pacifico', cursive;
-  font-size: calc(12px + 2vmin);
-  color: #69af33;
-  font-weight: lighter;
-  padding: 4rem 15rem 0 13rem;
-}
-
-.Quote-author {
-  font-size: calc(8px + 1vmin);
-  padding-left: 15rem;
-  color: rgb(68,68,68);
-  font-family: $text;
+  position: fixed;
+  top:0;
+  left:0;
 }

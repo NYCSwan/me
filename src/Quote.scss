@@ -1,0 +1,15 @@
+@import "./utils/_theme";
+
+.Quote {
+  font-family: $header;
+  font-size: calc(12px + 3vmin);
+  color: $text;
+  font-weight: lighter;
+  // max-width: 35rem;
+}
+
+.Quote-author {
+  font-size: calc(8px + 1vmin);
+  color: $text;
+  font-family: $text;
+}

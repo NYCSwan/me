@@ -1,0 +1,63 @@
+[
+  {
+    "topic": "spa",
+    "title": "Cayor Capital",
+    "role": "Sole Full Stack Developer",
+    "tags": [
+      "React",
+      "Mobile first",
+      "Javascript es6",
+      "Bootstrap",
+      "Google Cloud"
+    ],
+    "description": "Cayor Capital required a ",
+    "link": "wwww.cayorcapital.com"
+  },
+  {
+    "topic": "spa",
+    "title": "Aeroasis Education Platform",
+    "role": "Sole Full Stack Developer",
+    "tags": [
+      "Serverless backend",
+      "React",
+      "Mobile first",
+      "Javascript es6",
+      "Bootstrap",
+      "AWS"
+    ],
+    "description": "Education website for curricula",
+    "link": "wwww.aeroasis.com"
+  },
+  {
+    "topic": "spa",
+    "title": "Aeroasis",
+    "role": "Lead Developer",
+    "tags": ["Squarespace", "Mobile first", "Shopify", "Square integration"],
+    "description": "Website creation and maintance",
+    "link": "wwww.aeroasis.com"
+  },
+  {
+    "topic": "mobile",
+    "title": "Aeroasis Mobile App",
+    "role": "Lead Full Stack Developer",
+    "tags": [
+      "React Native",
+      "IOS",
+      "Android",
+      "IoT",
+      "Nodejs",
+      "AWS",
+      "Fastlane"
+    ],
+    "description": "Aeroasis Grow App: an IoT connected mobile user app. ",
+    "link": "wwww.#.com"
+  },
+  {
+    "topic": "mobile",
+    "title": "shareDo",
+    "role": "Lead Full Stack Developer",
+    "tags": ["React Native", "IOS", "Android", "Nodejs", "AWS"],
+    "description": "IoT connected mobile user app",
+    "link": "wwww.#.com"
+  }
+]
