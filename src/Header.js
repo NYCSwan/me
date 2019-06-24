@@ -9,7 +9,6 @@ import "./Header.scss";
 function Header() {
   const [hover, mouseOver] = useState(false);
 
-  // <MenuHeader onMouseOver={() => mouseOver(!hover)} />
   return (
     <nav className={hover === true ? "App-header open" : "App-header close"}>
       <img

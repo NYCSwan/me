@@ -2,14 +2,14 @@
 @import './utils/_theme';
 
 .m-menu {
-  width: inherit;
+  width: 0;
   height: 0;
   background-color: transparent;
   &.open {
     height: 100vh;
   }
   .inner {
-    width: inherit;
+    width: 0;
     height: 100vh;
     left: 50px;
     top: 0;
@@ -38,7 +38,7 @@
           height: auto;
 
           &.slide-up {
-            display: flex; 
+            display: flex;
             align-items: center;
             font-size: 1.2rem;
             font-family: $header;

@@ -1,19 +1,23 @@
 @import "./utils/_mixins";
+@import "./utils/_theme";
 
 .App-header {
   position: fixed;
   display: block;
-  z-index: 99;
+  z-index: 90;
   height: 0;
   width: 100%;
   top: 0;
   left: 0;
+  .close {
+    border-top: 80px solid $black;
+  }
   &.open {
-    animation: slide-down 2s ease-in;
-    border-top: 80px solid #69af33;
-    border-bottom: 30px solid #69af33;
-    border-left: 30px solid #69af33;
-    border-right: 30px solid #69af33;
+    animation: slide-down 2s ease;
+    border-top: 80px solid $black;
+    // border-bottom: 30px solid $black;
+    border-left: 30px solid $black;
+    border-right: 30px solid $black;
     height: 100%;
   }
   .logo {
@@ -56,15 +60,15 @@
   50% {
     opacity: 1;
     height: 60%;
-    border-top: 80px solid #69af33;
-    border-left: 10px solid #69af33;
-    border-right: 10px  solid #69af33;
+    border-top: 80px solid $black;
+    border-left: 10px solid $black;
+    border-right: 10px  solid $black;
   }
   100% {
-    border-top: 80px solid #69af33;
-    border-bottom: 30px solid #69af33;
-    border-left: 30px solid #69af33;
-    border-right: 30px solid #69af33;
+    border-top: 80px solid $black;
+    border-bottom: 10px solid $black;
+    border-left: 30px solid $black;
+    border-right: 30px solid $black;
     height: 100%;
     // transition: border-left border-right border-bottom 1s ease;
   }
