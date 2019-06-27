@@ -18,7 +18,15 @@ const useStyles = makeStyles({
     maxWidth: 400,
     flexGrow: 1,
     alignSelf: "center",
-    maxHeight: 100
+    maxHeight: 100,
+    zIndex: 99,
+    backgroundColor: "transparent"
+  },
+  dots: {
+    backgroundColor: "#53864A"
+  },
+  active: {
+    backgroundColor: "rgb(85, 26, 139)"
   },
   swipe: {
     justifyContent: "center",
@@ -34,8 +42,9 @@ const quotes = [
     author: "― Why The Lucky Stiff"
   },
   {
-    text: "Megan quote about me",
-    author: "― Why The Lucky Stiff"
+    text:
+      "Megan has been an indominable force behind our success. She has tirelessly worked to meet deadlines, creatively tackling problems that ",
+    author: "― Aeroasis Founder"
   },
   {
     text:
@@ -44,8 +53,18 @@ const quotes = [
   },
   {
     text:
+      "Megan is a great pair-programming partner. She's focused on helping navigate us through the problem or drives a feature while actively listening to my input and contributing thoughtfully to improve our code.",
+    author: "― Coworker"
+  },
+  {
+    text:
       "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
     author: "- Patrick McKenzie"
+  },
+  {
+    text:
+      "I have been so impressed with her persistence and dedication to learning and pushing through obstacles. I've seen many students crushed by the challenges in this class, Megan, even with additional challenges, made the most of it.",
+    author: "― Bootcamp Professor"
   }
 ];
 
@@ -78,22 +97,26 @@ export default function Home() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
         className={classes.swipe}
+        interval={5000}
       >
         {quotes.map((quote, index) => (
-          <Fade in={true}>
+          <Fade in={true} key={`${quote.author}-${index}`}>
             <Quote text={quote.text} author={quote.author} />
           </Fade>
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
         variant="dots"
-        steps={3}
+        steps={6}
         position="static"
         activeStep={activeStep}
-        className={classes.root}
+        classes={{
+          root: classes.root,
+          dot: classes.dots,
+          dotActive: classes.active
+        }}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === 2}>
-            Next
             {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
@@ -108,7 +131,6 @@ export default function Home() {
             ) : (
               <KeyboardArrowLeft />
             )}
-            Back
           </Button>
         }
       />

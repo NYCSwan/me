@@ -5,7 +5,11 @@ export default function Tags({ tags }) {
   return (
     <div className="tags">
       {tags.map(tag => {
-        return <button className="tag">{tag}</button>;
+        return (
+          <button key={tag} className="tag">
+            {tag}
+          </button>
+        );
       })}
     </div>
   );
