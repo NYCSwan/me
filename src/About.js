@@ -40,15 +40,21 @@ const useStyles = makeStyles(theme => ({
     height: "100%",
     zIndex: 99,
     overflow: "visible",
-    transition: "transform .5s ease"
+    transition: "height .5s ease"
   },
   hide: {
-    zIndex: 90,
+    // zIndex: 90,
     height: 30
   },
+  title: {
+    overflow: "visible"
+  },
   sub: {
-    height: "auto",
-    display: "block"
+    // height: "100%",
+    display: "block",
+    overflow: "visible",
+    lineHeight: "1.2rem",
+    textOverflow: "visible"
   },
   subhide: {
     height: 0,
@@ -77,10 +83,14 @@ export default function About() {
           </GridListTile>
           {tileData.map((tile, index) => (
             <GridListTile
-              onMouseOver={() => {
-                // debugger;
-                handleHover(!hover);
+              onMouseEnter={() => {
+                // e.preventDefault();
                 setIdx(index);
+                handleHover(true);
+              }}
+              onMouseLeave={() => {
+                setIdx(-1);
+                handleHover(false);
               }}
               key={tile.img}
               cols={tile.cols || 1}
@@ -91,10 +101,10 @@ export default function About() {
                 className={
                   hover & (idx === index) ? classes.tilebar : classes.hide
                 }
-                title={tile.title}
+                title={<span className={classes.title}>{tile.title}</span>}
                 subtitle={
                   <span
-                    className={idx !== index ? classes.subhide : classes.sub}
+                    className={idx === index ? classes.sub : classes.subhide}
                   >
                     {tile.sub}
                   </span>
@@ -108,7 +118,11 @@ export default function About() {
                   </IconButton>
                 }
               />
-              <img className="img" src={tile.img} alt={tile.alt} />
+              <img
+                className={hover & (idx === index) ? "img grey" : "img"}
+                src={tile.img}
+                alt={tile.alt}
+              />
             </GridListTile>
           ))}
         </GridList>

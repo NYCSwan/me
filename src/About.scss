@@ -18,14 +18,15 @@
     margin-top: 2%;
   }
   .MuiGridListTile-tile {
-    img {
+    transition: filter .5s ease-in-out;
+    .img {
       filter: grayscale(0);
-      &:hover {
+      &.grey {
         filter : grayscale(100%);
       }
     }
-    &:hover {
-      transition: filter .5s ease-in-out;
-    }
+    // &::after {
+    //   filter : grayscale(100%);
+    // }
   }
 }
