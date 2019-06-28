@@ -1,17 +1,19 @@
 @import "./utils/_theme";
 .tags {
-  align-self: flex-start;
+  align-self: flex-end;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   width: 100%;
   .tag {
     font-size: .6rem;
+    letter-spacing: .1rem;
     font-family: $text;
     color: $purple;
-    font-weight: bold;
-    border-radius: 25px;
+    font-weight: 600;
+    border-radius: 5px;
     background-color: $lightGrey;
+    margin-bottom: 5px;
   }
 }

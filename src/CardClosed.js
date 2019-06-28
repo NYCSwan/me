@@ -9,19 +9,24 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   card: {
     maxWidth: 350,
-    minHeight: 280,
+    minHeight: 200,
     marginLeft: 40,
     marginRight: 40,
     borderColor: "rgba(44,48,66,0.3)",
     borderWidth: 2
   },
   media: {
-    height: 240,
+    height: 200,
     width: "auto"
   },
   button: {
     alignContent: "center",
+    display: "flex",
     justifyContent: "center"
+  },
+  link: {
+    color: "rgba(85, 26, 139, 1)",
+    textDecoration: "none"
   }
 });
 
@@ -39,7 +44,7 @@ export default function CardFull({ match, id, image, title, body }) {
         />
       </CardActionArea>
       <CardActions className={classes.button}>
-        <Link className="link" to={`${match.url}/${id}`}>
+        <Link className={classes.link} to={`${match.url}/${id}`}>
           Learn More
         </Link>
       </CardActions>

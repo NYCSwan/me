@@ -20,6 +20,14 @@ const useStyles = makeStyles({
   media: {
     height: 240,
     width: "auto"
+  },
+  button: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  link: {
+    color: "rgba(85, 26, 139, 1)",
+    textDecoration: "none"
   }
 });
 
@@ -36,7 +44,7 @@ export default function CardFull({ match, id, image, title, body }) {
           component="img"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom component="h5">
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -44,8 +52,10 @@ export default function CardFull({ match, id, image, title, body }) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Link to={`${match.url}/${id}`}>Learn More</Link>
+      <CardActions className={classes.button}>
+        <Link className={classes.link} to={`${match.url}/${id}`}>
+          Learn More
+        </Link>
       </CardActions>
     </Card>
   );
