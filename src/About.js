@@ -14,6 +14,12 @@ import startups from "./static/startups.jpg";
 import travel from "./static/travel.jpg";
 import reading from "./static/reading.jpg";
 import hustle from "./static/hustle.jpg";
+import data from "./static/data.jpg";
+import design from "./static/design.jpg";
+import learn from "./static/learn.jpg";
+import collaboration from "./static/collaboration.jpg";
+import git from "./static/git.jpg";
+
 import "./About.scss";
 
 const useStyles = makeStyles(theme => ({
@@ -22,44 +28,79 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     alignContent: "flex-start",
-    overflowX: "hidden",
     scrollBhavior: "smooth",
-    overflowY: "scroll",
+    overflow: "visible",
     paddingBottom: 15,
     marginBottom: 25
   },
   gridList: {
     width: 900,
-    height: 700
+    // minHeight: 700,
+    overflow: "visible"
   },
   tile: {
-    borderColor: "pink",
-    borderWidth: 1
+    // backgroundColor: "pink"
   },
   tilebar: {
     height: "100%",
     zIndex: 99,
-    overflow: "visible",
-    transition: "height .5s ease"
+    transition: "height .7s ease-in-out"
+  },
+  titleWrap: {
+    justifyContent: "center",
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "column",
+    alignItems: "center",
+    width: "70%",
+    alignSelf: "center",
+    paddingBottom: 10,
+    paddingTop: 10
   },
   hide: {
-    // zIndex: 90,
     height: 30
   },
   title: {
-    overflow: "visible"
+    alignSelf: "center"
   },
-  sub: {
-    // height: "100%",
-    display: "block",
-    overflow: "visible",
+  subtitle: {
+    overflowY: "visible",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "center",
+    width: "inherit",
+    backgroundColor: "rgba(0,0,0,0.7)"
+  },
+  subT: {
+    overflowY: "visible",
+    alignSelf: "center",
     lineHeight: "1.2rem",
-    textOverflow: "visible"
+    height: "auto",
+    textAlign: "left",
+    whiteSpace: "pre-wrap"
+    // fontFamily: ,
   },
-  subhide: {
-    height: 0,
-    display: "none"
+  header: {
+    width: "80%",
+    paddingBottom: "5%",
+    fontFamily: "Cuprum, sans-serif",
+    color: "black",
+    fontSize: "1.1rem",
+    // alignSelf: "center",
+    marginTop: "5%"
   }
+  // sub: {
+  //   // width: "inherit",
+  //   // textOverflow: "visible",
+  //   overflowY: "visible",
+  //   // height: 150,
+  //   lineHeight: "1.2rem"
+  // },
+  // subhide: {
+  //   height: 0,
+  //   display: "none"
+  // }
 }));
 
 export default function About() {
@@ -74,17 +115,18 @@ export default function About() {
           cellHeight={100}
           className={classes.gridList}
           cols={5}
-          spacing={4}
+          spacing={6}
         >
-          <GridListTile key="Subheader" cols={5} style={{ height: "auto" }}>
-            <ListSubheader component="div">
-              Hey there! Thanks for stopping by. A little more about me:
+          <GridListTile key="Subheader" cols={5}>
+            <ListSubheader component="div" className={classes.header}>
+              Hey there! Thanks for stopping by. I am a full stack developer
+              with a unique background in education and the arts. A little more
+              about me:
             </ListSubheader>
           </GridListTile>
           {tileData.map((tile, index) => (
             <GridListTile
               onMouseEnter={() => {
-                // e.preventDefault();
                 setIdx(index);
                 handleHover(true);
               }}
@@ -95,28 +137,21 @@ export default function About() {
               key={tile.img}
               cols={tile.cols || 1}
               rows={tile.rows || 1}
-              className={classes.tile[idx]}
             >
               <GridListTileBar
-                className={
-                  hover & (idx === index) ? classes.tilebar : classes.hide
-                }
-                title={<span className={classes.title}>{tile.title}</span>}
-                subtitle={
-                  <span
-                    className={idx === index ? classes.sub : classes.subhide}
-                  >
-                    {tile.sub}
+                classes={{
+                  root:
+                    hover & (idx === index) ? classes.tilebar : classes.hide,
+                  rootSubtitle: classes.subtitle,
+                  titleWrap: classes.titleWrap,
+                  subtitle: classes.subT
+                }}
+                title={
+                  <span className={classes.title}>
+                    {tile.title.toUpperCase()}
                   </span>
                 }
-                actionIcon={
-                  <IconButton
-                    aria-label={`info about ${tile.title}`}
-                    className={classes.icon}
-                  >
-                    <InfoIcon />
-                  </IconButton>
-                }
+                subtitle={<span>{tile.sub}</span>}
               />
               <img
                 className={hover & (idx === index) ? "img grey" : "img"}
@@ -133,13 +168,30 @@ export default function About() {
 
 const tileData = [
   {
-    img: art,
-    title: "Art",
+    img: data,
     sub:
-      "You can find me painting or touring the latest exhibits at my favorite museums.",
-    alt: "Photo by Khara Woods on Unsplash",
-    cols: 3,
-    rows: 3
+      "With so much available data provided by open source contributions, and transparency efforts, data visualizations are a great way to help users undertand and analyze important information and data trends.",
+    title: "Data Visualizations",
+    alt: "data visualizations",
+    cols: 2,
+    rows: 2
+  },
+  {
+    img: design,
+    sub:
+      "Design and development go hand-in-hand. If technology is not made accessable through a thoughtful user-focused design, it will never succeed. In my work, I try to ensure each feature keeps the user in mind.",
+    title: "Design",
+    alt: "Photo by Hal Gatewood on Unsplash",
+    cols: 2,
+    rows: 2
+  },
+  {
+    img: hustle,
+    sub: "hustling",
+    title: "Work Hard",
+    alt: "logo as filler",
+    cols: 1,
+    rows: 2
   },
   {
     img: travel,
@@ -147,13 +199,31 @@ const tileData = [
       "My love of traveling has introduced me to new friends, incredible adventures and a wider understanding of our world, the needs of people and the possibilities that lay before us.",
     title: "Travel",
     alt: "Photo by Marten Bjork on Unsplash",
+    cols: 1,
+    rows: 3
+  },
+  {
+    img: learn,
+    title: "Education",
+    sub:
+      "As a former teacher, I take advantage of any opportunity to share my knowledge and can often be found answering CS questions to technical and non-technical teammates. Dedicated to continuously learning-- building product-related education materials with my education background, assisting the team or teaching myself a new programming language.",
+    alt: "Photo by Greg Rakozy on Unsplash",
+    cols: 2,
+    rows: 3
+  },
+  {
+    img: art,
+    title: "Art",
+    sub:
+      "When my nose is not glued to my computer, you can find me painting or touring the latest exhibits at my favorite museums.",
+    alt: "Photo by Khara Woods on Unsplash",
     cols: 2,
     rows: 3
   },
   {
     img: startups,
     sub:
-      "I love working with startups and non profit organizations. Utilizing my skills as a programmer, thought leader, and ",
+      "I love working with startups and non profit organizations. Utilizing my skills as a programmer, thought leader, and manager, I lead my teams and clients to success with my wide breadth of expertise and dedication to excellence.",
     title: "Start Ups",
     alt: "Photo by Katie Smith on Unsplash",
     cols: 2,
@@ -162,7 +232,7 @@ const tileData = [
   {
     img: reading,
     sub:
-      "Need a good book for the beach or summary of the latest javascript text? I've probably read it.",
+      "Need a good book for the beach or summary of the latest javascript text? Ask me! I've probably read it. My skills as a developer are enhanced as a book worm. I can spot an errant , or typo anywhere.",
     title: "Book Worm",
     alt: "Photo by Raj Eiamworakul on Unsplash",
     cols: 1,
@@ -170,8 +240,9 @@ const tileData = [
   },
   {
     img: fam,
-    title: "Family",
-    sub: "My puppy, Rogue!",
+    title: "Me",
+    sub:
+      "My puppy, Rogue and family mascot had to make it into my website. I'm a startup founder, technology nerd, former public school teacher, and non-profit manager. I'm always up for a challenge, get in touch if you'd like a great partner",
     alt: "Rogue -- pair programming partner, puppy extrordinary",
     cols: 2,
     rows: 2
@@ -180,26 +251,26 @@ const tileData = [
     img: food,
     title: "Dillitant farmer & chef",
     sub:
-      "I may live in NYC but I love growing my window sill garden and cooking anything spicy!",
+      "I may live in NYC but I love growing my window sill garden and cooking anything spicy! I have been working on IoT connected gardening and cooking applications for the last few years. Always happy to dish on the future of IoT in farming and food!",
     alt: "Photo by Clark Tibbs on Unsplash",
     cols: 2,
-    rows: 2
+    rows: 3
   },
   {
-    img: education,
-    title: "Education",
+    img: collaboration,
+    title: "Collaboration",
     sub:
-      "Dedicated to continuously learning, whether that may be building curricula with my previous experience as a teacher or teaching myself a new programming language.",
-    alt: "Photo by Tim Mossholder on Unsplash",
+      "No project can be successful without deliberate, clear communcation and collaboration. ",
+    alt: "Photo by John Schnobrich on Unsplash",
     cols: 2,
-    rows: 2
+    rows: 3
   },
   {
-    img: hustle,
-    sub: "hustling",
-    title: "filler",
-    alt: "logo as filler",
+    img: git,
+    title: "Skills",
+    sub: "Something here",
+    alt: "Photo by Yancy Min on Unsplash",
     cols: 1,
-    rows: 2
+    rows: 3
   }
 ];
