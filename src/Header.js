@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import ExpandedHeader from "./ExpandedHeader";
-// import { Github, Linkedin } from "@material-ui/icons";
-// import Icon from "@material-ui/core/Icon";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import logo from "./static/swan_logo_white.png";
 import "./Header.scss";
