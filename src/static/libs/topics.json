@@ -8,9 +8,11 @@
       "Mobile first",
       "Javascript es6",
       "Bootstrap",
-      "Google Cloud"
+      "Google Cloud",
+      "SASS"
     ],
-    "description": "Cayor Capital required a ",
+    "date": "2018 - Present",
+    "description": "Cayor Capital launched in 2015, as a Sub-Saharan Africa equity fund, focusing on mid-market assets and investments. Upon reaching their investment goal, Cayor required a website update. I worked with the Cayor team to design and develop and maintain thier new, responsive single page app to attract future investments.\n My approach to Cayor was to advocate for a fresh, updated interface that put the investors and portfolio companies first. To make the site user-friendly, we focused on breathing life into the Company decks and transforming the details into designed pages.",
     "link": "wwww.cayorcapital.com"
   },
   {
@@ -25,15 +27,23 @@
       "Bootstrap",
       "AWS"
     ],
-    "description": "Education website for curricula",
+    "date": "2019",
+    "description": "Aeroasis is a resource autonomy startup with a strong focus on education. I developed an education curricula, designed and developed a platform for teachers and educators to access and interact with the lesson plans.",
     "link": "wwww.aeroasis.com"
   },
   {
     "topic": "spa",
     "title": "Aeroasis",
     "role": "Lead Developer",
-    "tags": ["Squarespace", "Mobile first", "Shopify", "Square integration"],
-    "description": "Website creation and maintance",
+    "tags": [
+      "Squarespace",
+      "Mobile first",
+      "Shopify",
+      "Square integration",
+      "HTML/CSS"
+    ],
+    "date": "2017 - Present",
+    "description": "I manage and led in the development of the Aeroasis Website, which led to a 200% increase in visitor traffic and improved company SEO. Created and maintain company shop through Shopify, paypal, and Square.",
     "link": "wwww.aeroasis.com"
   },
   {
@@ -49,7 +59,8 @@
       "AWS",
       "Fastlane"
     ],
-    "description": "Aeroasis Grow App: an IoT connected mobile user app. ",
+    "date": "2019",
+    "description": "Aeroasis Grow App: an IoT connected mobile user app that maintains and controls an indoor garden ecosystem. ",
     "link": "wwww.#.com"
   },
   {
@@ -57,7 +68,8 @@
     "title": "shareDo",
     "role": "Lead Full Stack Developer",
     "tags": ["React Native", "IOS", "Android", "Nodejs", "AWS"],
-    "description": "IoT connected mobile user app",
+    "date": "2019",
+    "description": "Mobile app that shares to do lists with participants. Forget to tell your kids to pack their gym clothes or make a honey-do list that you partner will never be able to say, 'You never told me!'. With shareDo, anyone can create and share to do lists with their family and friends.",
     "link": "wwww.#.com"
   }
 ]

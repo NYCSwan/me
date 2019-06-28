@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Quote.scss";
 
 export default function Quote({ text, author }) {

@@ -10,20 +10,23 @@ function Header() {
   const [hover, mouseOver] = useState(false);
 
   return (
-    <nav className={hover === true ? "App-header open" : "App-header close"}>
+    <nav
+      className={hover === true ? "App-header open" : "App-header close"}
+      onMouseLeave={() => mouseOver(false)}
+    >
       <img
         className="logo"
         src={logo}
         alt="Megan Swanby- Kickass problem solver, kind soul, tenacious programmer"
       />
-      <a className="menu" href="#" onClick={() => mouseOver(!hover)}>
-        <SvgIcon onMouseOver={() => mouseOver(!hover)} fontSize="large">
+      <div className="menu" onClick={() => mouseOver(!hover)}>
+        <SvgIcon onMouseEnter={() => mouseOver(true)} fontSize="large">
           <path
             fill="#ffffff"
             d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
           />
         </SvgIcon>
-      </a>
+      </div>
       <ExpandedHeader hover={hover} />
       <div className="communication-container">
         <SvgIcon fontSize="small">
