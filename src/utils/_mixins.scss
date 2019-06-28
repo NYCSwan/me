@@ -1,6 +1,6 @@
 @mixin slide-up {
   &.slide-up {
-    transform: translateY(-85px);
+    transform: translateY(-105px);
     // opacity: 1;
     transition: transform 1s ease-in;
   }
