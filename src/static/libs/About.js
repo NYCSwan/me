@@ -15,7 +15,7 @@ const topics = [
   {
     img: data,
     sub:
-      "With so much available data provided by open source contributions, and transparency efforts, data visualizations are a great way to help users undertand and analyze important information and data trends. I love to sneak in a good D3 chart or visualization wherever I can.",
+      "With so much available data provided by open source contributions and transparency efforts, data visualizations are a great way to help users undertand and analyze important information and data trends. I love to sneak in a good D3 chart or visualization wherever I can.",
     title: "Data Visualizations",
     alt: "data visualizations",
     cols: 2,
@@ -32,7 +32,7 @@ const topics = [
   },
   {
     img: hustle,
-    sub: "hustling",
+    sub: "Hustling every day to make the most of technology.",
     title: "Work Hard",
     alt: "logo as filler",
     cols: 1,
@@ -41,7 +41,7 @@ const topics = [
   {
     img: travel,
     sub:
-      "My love of traveling has introduced me to new friends, incredible adventures and a wider understanding of our world, the needs of people and the possibilities that lay before us. I have built sites with international reach",
+      "My love of traveling has introduced me to new friends, incredible adventures and a wider understanding of our world, the needs of people and the possibilities that lay before us. enabling me to build sites with international reach.",
     title: "Travel",
     alt: "Photo by Marten Bjork on Unsplash",
     cols: 1,
@@ -77,7 +77,7 @@ const topics = [
   {
     img: reading,
     sub:
-      "Need a good book for the beach or summary of the latest javascript text? Ask me! I've probably read it. My skills as a developer are enhanced as a book worm. I can spot an errant , or typo anywhere.",
+      "Need a good book for the beach or summary of the latest javascript text? Ask me! I've probably read it. My skills as a developer are enhanced as a book worm. I can spot an errant comma or typo anywhere.",
     title: "Book Worm",
     alt: "Photo by Raj Eiamworakul on Unsplash",
     cols: 1,
@@ -87,16 +87,16 @@ const topics = [
     img: fam,
     title: "Me",
     sub:
-      "This is Rogue, my puppy and family mascot. I'm a startup founder, technology nerd, and former public school teacher, non-profit manager. I'm always up for a challenge, get in touch if you'd like a great partner",
+      "This is Rogue, my puppy and family mascot. I'm a startup founder, technology nerd, former public school teacher, and non-profit manager. I'm always up for a challenge, get in touch if you'd like a great partner!",
     alt: "Rogue -- pair programming partner, puppy extrordinary",
     cols: 2,
     rows: 2
   },
   {
     img: food,
-    title: "Dillitant farmer & chef",
+    title: "Dilettante farmer & chef",
     sub:
-      "I may live in NYC but I love growing my window sill garden and cooking anything spicy! I have been working on IoT connected gardening and home applications for the last few years. Always happy to dish on the future of IoT in farming and food!",
+      "I may live in NYC but I love growing my windowsill garden and cooking anything spicy! I have been working on IoT connected gardening and home applications for the last few years. Always happy to dish on the future of IoT in agriculture and food!",
     alt: "Photo by Clark Tibbs on Unsplash",
     cols: 2,
     rows: 3

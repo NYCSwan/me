@@ -25,7 +25,8 @@
       "Mobile first",
       "Javascript es6",
       "Bootstrap",
-      "AWS"
+      "AWS",
+      "D3"
     ],
     "date": "2019",
     "description": "Aeroasis is a resource autonomy startup with a strong focus on education. I developed an education curricula, designed and developed a platform for teachers and educators to access and interact with the lesson plans.",
@@ -49,7 +50,7 @@
   {
     "topic": "mobile",
     "title": "Aeroasis Mobile App",
-    "role": "Lead Full Stack Developer",
+    "role": "Full Stack Developer",
     "tags": [
       "React Native",
       "IOS",
@@ -69,7 +70,7 @@
     "role": "Lead Full Stack Developer",
     "tags": ["React Native", "IOS", "Android", "Nodejs", "AWS"],
     "date": "2019",
-    "description": "Mobile app that shares to do lists with participants. Forget to tell your kids to pack their gym clothes or make a honey-do list that you partner will never be able to say, 'You never told me!'. With shareDo, anyone can create and share to do lists with their family and friends.",
+    "description": "Mobile app that shares to do lists with your friends or family. Nevr forget to tell your kids to pack their bags for vacation or make a honey-do list that you partner can say, 'You never told me!'. With shareDo, anyone can create and share to do lists with the contacts.",
     "link": "wwww.#.com"
   }
 ]
