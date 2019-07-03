@@ -1,4 +1,5 @@
 @import "./utils/_theme";
+@import "./utils/_mobile";
 
 .Portfolio-container {
   z-index: 99;
@@ -9,17 +10,18 @@
   width: inherit;
   height: 100%;
   overflow-y: scroll;
-  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 3%;
+  padding-bottom: 3%;
+
   .header {
     color: $white;
     font-family: $header;
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: calc(12px + 2vmin);
+    line-height: calc(12px + 3vmin);
   }
   .cards {
     display: flex;
@@ -28,11 +30,28 @@
     justify-content: space-between;
     align-items: center;
     transition: height .5s ease;
+    @include phone {
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: space-between;
+      margin-bottom: 1rem;
+      &.open {
+        display: none;
+      }
+    };
     .link {
       align-self: center;
       text-align: center;
       color: $text !important;
       font-family: $text;
     }
+  }
+  .back {
+    position: sticky;
+    bottom: 0;
+    order: 3;
+    height: 30px;
+    width: 100%;
+    margin: 10px;
   }
 }

@@ -8,7 +8,6 @@ export default function Topic({ match }) {
   return (
     <Fade in={true} key={match.params.id}>
       <div className="Topic">
-        <h3>{match.params.id.toUpperCase()}</h3>
         {/* TODO: sort by tags */}
         <div className="topics">
           {/*// eslint-disable-line no-use-before-define*/}

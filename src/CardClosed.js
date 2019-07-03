@@ -3,8 +3,10 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { Link } from "react-router-dom";
 import CardActions from "@material-ui/core/CardActions";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 import CardMedia from "@material-ui/core/CardMedia";
-import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles({
   card: {
@@ -32,6 +34,8 @@ const useStyles = makeStyles({
 
 export default function CardFull({ match, id, image, title, body }) {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <Card raised={true} className={classes.card}>

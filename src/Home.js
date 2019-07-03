@@ -27,11 +27,6 @@ const useStyles = makeStyles({
   },
   active: {
     backgroundColor: "rgb(85, 26, 139)"
-  },
-  swipe: {
-    justifyContent: "center",
-    alignSelf: "center",
-    width: "70%"
   }
 });
 
@@ -87,7 +82,7 @@ export default function Home() {
 
   return (
     <div className="Home-container">
-      <video id="background-video" loop autoPlay>
+      <video id="background-video" loop muted autoPlay>
         <source src={water} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -96,8 +91,8 @@ export default function Home() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        className={classes.swipe}
-        interval={5000}
+        className="swipe"
+        interval={6000}
       >
         {quotes.map((quote, index) => (
           <Fade in={true} key={`${quote.author}-${index}`}>

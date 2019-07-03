@@ -20,7 +20,7 @@ export default function Portfolio({ match }) {
           </h3>
         )}
       />
-      <div className="cards">
+      <div className={match.isExact ? "cards" : "cards open"}>
         {match.isExact ? (
           <React.Fragment>
             <CardFull
@@ -58,6 +58,13 @@ export default function Portfolio({ match }) {
         )}
       </div>
       <Route path={`${match.path}/:id`} component={Topic} />
+      {match.isExact ? null : (
+        <div className="back">
+          <a className="btn" href={`${match.path}/:id`}>
+            back
+          </a>
+        </div>
+      )}
     </div>
   );
 }
