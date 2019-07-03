@@ -3,13 +3,11 @@
 .Quote {
   font-family: $header;
   font-size: calc(12px + 3vmin);
-  color: $text;
-  font-weight: lighter;
-  // max-width: 35rem;
+  color: $white;
 }
 
 .Quote-author {
   font-size: calc(8px + 1vmin);
-  color: $text;
+  color: $white;
   font-family: $text;
 }
