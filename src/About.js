@@ -5,18 +5,6 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import topics from "./static/libs/About.js";
-// import art from "./static/art.jpg";
-// import fam from "./static/fam.jpg";
-// import food from "./static/food.jpg";
-// import startups from "./static/startups.jpg";
-// import travel from "./static/travel.jpg";
-// import reading from "./static/reading.jpg";
-// import hustle from "./static/hustle.jpg";
-// import data from "./static/data.jpg";
-// import design from "./static/design.jpg";
-// import learn from "./static/learn.jpg";
-// import collaboration from "./static/collaboration.jpg";
-// import git from "./static/git.jpg";
 
 import "./About.scss";
 
@@ -42,6 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
   tilebar: {
     zIndex: 99,
+    height: "100%",
     transition: "height .5s ease-in-out"
   },
   titleWrap: {
@@ -56,7 +45,8 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 10
   },
   hide: {
-    height: 0
+    height: "2rem",
+    zIndex: 99
   },
   subtitle: {
     overflowY: "visible",
